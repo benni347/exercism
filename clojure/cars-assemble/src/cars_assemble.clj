@@ -1,0 +1,18 @@
+(ns cars-assemble)
+
+(def cars-per-hour 221)
+
+(defn success-rate [speed]
+  (condp <= speed
+    10 0.77
+    9  0.8
+    5  0.9
+    1  1.0
+    0.0)
+  )
+
+(defn production-rate [speed]
+  (* speed cars-per-hour (success-rate speed)))
+
+(defn working-items [speed]
+  (int (/ (production-rate speed) 60)))
