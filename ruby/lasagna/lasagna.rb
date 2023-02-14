@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 class Lasagna
+  ##
+  # Represents a recipe for lasagna.
   EXPECTED_MINUTES_IN_OVEN = 40
   def remaining_minutes_in_oven(actual_minutes_in_oven)
     EXPECTED_MINUTES_IN_OVEN - actual_minutes_in_oven
