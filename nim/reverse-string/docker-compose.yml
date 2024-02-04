@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  nim-app:
+    image: nimlang/nim
+    command: nim r ./test_reverse_string.nim
+    volumes:
+      - .:/usr/src/np
+    working_dir: /usr/src/np
+
